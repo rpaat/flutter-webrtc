@@ -64,6 +64,8 @@ class RTCVideoRendererWeb extends VideoRenderer {
   @override
   bool get renderVideo => _videoElement != null && _srcObject != null;
 
+  html.VideoElement get videoElement => _videoElement;
+
   @override
   Future<void> initialize() async {
     _videoElement = html.VideoElement()
